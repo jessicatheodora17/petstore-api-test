@@ -19,9 +19,7 @@
     }
   },
   "lint-staged": {
-    "*.{js,json}": [
-      "./node_modules/.bin/eslint"
-    ]
+    "*.{js,json}": "eslint --fix"
   },
   "eslintIgnore": [
     "node_modules"
