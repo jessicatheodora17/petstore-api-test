@@ -7,7 +7,8 @@
     "test": "node ./node_modules/mocha/bin/mocha ./test/ --recursive --reporter mochawesome --reporter-options reportDir=reports/all-service/mochawesome/ --timeout 30000",
     "testNoReport": "node ./node_modules/mocha/bin/mocha ./test/",
     "testGetEndpoint": "node ./node_modules/mocha/bin/mocha ./test/ --grep '@GET'",
-    "testPostEndpoint": "node ./node_modules/mocha/bin/mocha ./test/ --grep '@POST'"
+    "testPostEndpoint": "node ./node_modules/mocha/bin/mocha ./test/ --grep '@POST'",
+    "lintFix": "eslint . --fix"
   },
   "keywords": [],
   "license": "ISC",
@@ -18,12 +19,12 @@
     }
   },
   "lint-staged": {
-      "*.js": [
-          "./node_modules/.bin/eslint"
-      ]
+    "*.{js,json}": [
+      "./node_modules/.bin/eslint"
+    ]
   },
   "eslintIgnore": [
-      "node_modules"
+    "node_modules"
   ],
   "devDependencies": {
     "chai": "^4.5.0",

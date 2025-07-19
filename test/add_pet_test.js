@@ -13,7 +13,6 @@ const testCase={
 
 let manipulatedData
 
-
 describe(`@POST @testAddPetData ${testCase.describe}`, () => {
     // will add data manipulation so it can create random, fresh data each time and each case (if there's any in near future)
     beforeEach('Data manipulation', () => {
